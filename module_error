@@ -1,0 +1,21 @@
+Error: Cannot find module 'webpack'
+-> npm link webpack
+
+Error: Cannot find module 'webpack-cli/bin/config-yargs'
+->  npm uninstall webpack -g
+    npm uninstall -g webpack-dev-server
+    npm install webpack@3.8.0 --save-dev 
+    npm install react-hot-loader webpack-dev-server@2.9.7 --save-dev
+
+Module build failed: Error: Plugin/Preset files are not allowed to export objects
+-> npm i @babel/preset-react
+
+{
+    "presets": ["@babel/preset-env","@babel/preset-react"]
+}
+
+Module build failed: LoaderRunnerError: Module 'C:\Users\user\Desktop\MainBrain\React\VELOPERT\react-fundamentals\node_modules\react-hot-loader\index.js' is not a loader (must have normal or pitch function)
+-> loaders: ['react-hot-loader/webpack', 'babel-loader?' + JSON.stringify({
+        cacheDirectory: true,
+        presets: ["@babel/preset-env", "@babel/preset-react"]
+    })]

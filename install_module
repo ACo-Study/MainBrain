@@ -12,5 +12,6 @@ npm install --save-dev react-hot-loader webpack-dev-server
 react-hot-loader : 개발 서버가 실행 중 특정 리액트 컴포넌트가 변경되면 해당 컴포넌트만 업데이트해주는 모듈
 loader들이 webpack-dev-server을 의존하고 있기 때문에 로컬로도 설치 해야 함
 
-npm install -g --dev jshint eslint
-jshint: js틀린 부분 표시
+
+npm prune
+사용하지 않는 (`package.json`에 정의되어 있지 않는) 라이브러리 삭제
