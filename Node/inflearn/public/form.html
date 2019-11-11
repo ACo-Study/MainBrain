@@ -1,10 +1,12 @@
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>email form</title>
 </head>
+
 <body>
-    <form action="email_post" method="post">
+    <form action="/email/form" method="post">
         email : <input type="text" name="email"><br />
         <input type="submit">
     </form>
@@ -16,11 +18,13 @@
     <script>
         document.querySelector('.ajaxsend').addEventListener('click', () => {
             var inputdata = document.forms[0].elements[0].value;
-            sendAjax('http://127.0.0.1:3000/ajax_send_email', inputdata);
+            sendAjax('http://127.0.0.1:3000/email/ajax', inputdata);
         })
 
         function sendAjax(url, data) {
-            var data = {'email' : data};
+            var data = {
+                'email': data
+            };
             data = JSON.stringify(data);
 
             const xhr = new XMLHttpRequest();
@@ -39,11 +43,12 @@
                 const result = JSON.parse(xhr.responseText);
                 const resultDiv = document.querySelector(".result")
 
-                if(result.result !== "ok") resultDiv.innerHTML = "your email not found"
+                if (result.result !== "ok") resultDiv.innerHTML = "your email is not found"
                 else resultDiv.innerHTML = result.name;
             });
-            
+
         }
     </script>
 </body>
+
 </html>
