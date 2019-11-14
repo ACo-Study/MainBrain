@@ -1,12 +1,15 @@
 npm install -g webpack webpack-dev-server
 webpack : 브라우저 위에서 import(require)를 할 수 있게 해주고 자바스크립트 파일들을 하나로 합쳐 줌
 webPack-dev-server: 별도의 서버를 구축하지 않고도 static 파일을  다루는 웹서버를 열 수 있으며 hot-loader를 통하여 코드가 수정될 때 마다 자동으로 리로드 되게 함
+-> 변경 npm i -g webpack webpack-cli && npm i -D webpack webpack-cli
 
 npm install --save react react-dom
 
 npm install --save-dev babel-core babel-loader babel-preset-es2015 babel-preset-react
 babel : ES6 문법을 프로젝트에서 사용할 수 있게 하는 모듈
 babel-preset-react : JSX형태의 코드를 인식할 수 있도록 하는 react 모듈
+-> 변경 npm i -D babel-loader @babel/core @babel/preset-env @babel/preset-react
+
 
 npm install --save-dev react-hot-loader webpack-dev-server
 react-hot-loader : 개발 서버가 실행 중 특정 리액트 컴포넌트가 변경되면 해당 컴포넌트만 업데이트해주는 모듈
@@ -18,7 +21,7 @@ npm install --save react-addons-update
 import update from 'react-addons-update'
 
 
-
+-> https://www.zerocho.com/category/Webpack/post/58aa916d745ca90018e5301d
 
 npm prune
 사용하지 않는 (`package.json`에 정의되어 있지 않는) 라이브러리 삭제
