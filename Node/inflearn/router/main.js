@@ -1,10 +1,12 @@
-const express = require('express')
-const app = express()
+const express = require("express");
+const app = express();
 const router = express.Router();
-const path = require('path')
+const path = require("path");
 
-router.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/main.html"));
+router.get("/", (req, res) => {
+  console.log(`main js loaded ${req.user}`);
+  res.sendFile(path.join(__dirname, "../public/main.html"));
+  res.render("main,ejs", { id: id });
 });
 
 module.exports = router;
