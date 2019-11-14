@@ -1,0 +1,6 @@
+React.js
+    - Redux 프로젝트 구조 생성 완료.
+    - PropTypes가 'react'에서 'prop-types'로 바뀐 것을 알게 되었다.
+
+Node.js
+    - passport 기반 세션 처리 완료.
