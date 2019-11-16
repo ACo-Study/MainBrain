@@ -1,6 +1,6 @@
 Node 모듈
 
-npm install --save express body-parser morgan
+npm install --save express body-parser
 
 
 
@@ -31,10 +31,10 @@ npm install @babel/polyfill
 
 
 
-
-
 아직 필요하지 않은 것들
 
 nodemon
 
 cross-env
+
+ morgan
