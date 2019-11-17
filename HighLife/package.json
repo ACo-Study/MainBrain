@@ -1,10 +1,13 @@
 {
-  "name": "HighLife",
+  "name": "highlife",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack -w"
+    "clean": "rm -rf build public/bundle.js",
+    "build": "babel server -w -d build && webpack -w",
+    "start": "set NODE_ENV=production&&node ./build/main.js",
+    "development": "set NODE_ENV=development&&node ./build/main.js"
   },
   "keywords": [],
   "author": "",

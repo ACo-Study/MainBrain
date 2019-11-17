@@ -1,15 +1,15 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const app = express();
+const bodyParser = require("body-parser");
 const mysql = require("mysql");
-
-app.listen(3000, () => {
-  console.log("Server Start");
-});
 
 app.use(express.static("public"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.listen(3000, () => {
+  console.log("Server Start");
+});
 
 const connection = mysql.createConnection({
   host: "localhost",
@@ -25,12 +25,12 @@ app.post("/login", (req, res) => {
   let data = [];
 
   let query = connection.query(
-    `SELECT name FROM USER WHERE id = '${id}'`,
-    async (err, rows) => {
+    `SELECT name FROM user WHERE id = '${id}'`,
+    (err, rows) => {
       if (err) throw err;
       if (rows[0]) {
         data.push({
-          result: true,
+          reuslt: true,
           name: rows[0].name
         });
       } else {
@@ -39,7 +39,7 @@ app.post("/login", (req, res) => {
           name: ""
         });
       }
-      await res.render("index.ejs", { data: JSON.stringify(data) });
+      res.render("index.ejs", { data: JSON.stringify(data) });
     }
   );
 });
