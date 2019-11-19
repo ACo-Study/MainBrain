@@ -2,6 +2,8 @@
 
 var _express = _interopRequireDefault(require("express"));
 
+var _path = _interopRequireDefault(require("path"));
+
 var _webpackDevServer = _interopRequireDefault(require("webpack-dev-server"));
 
 var _webpack = _interopRequireDefault(require("webpack"));
@@ -9,6 +11,8 @@ var _webpack = _interopRequireDefault(require("webpack"));
 var _morgan = _interopRequireDefault(require("morgan"));
 
 var _bodyParser = _interopRequireDefault(require("body-parser"));
+
+var _routes = _interopRequireDefault(require("./routes"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -19,6 +23,8 @@ var port = 3000;
 var devPort = 4000;
 app.use((0, _morgan["default"])("dev"));
 app.use(_bodyParser["default"].json());
+app.use("/", _express["default"]["static"](_path["default"].join(__dirname, "./../public"))); // app.use("/api", api);
+
 /*
     Express Codes 
 */
@@ -33,7 +39,11 @@ if (process.env.NODE_ENV == "development") {
   devServer.listen(devPort, function () {
     console.log("webpack-dev-server is listening on port", devPort);
   });
-} // import express from 'express';
+}
+
+var server = app.listen(port, function () {
+  console.log("Express listening on port", port);
+}); // import express from 'express';
 // import path from 'path';
 // import webpack from 'webpack';
 // import WebpackDevServer from 'webpack-dev-server';
