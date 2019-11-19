@@ -21,8 +21,12 @@ module.exports = {
     historyApiFallback: true,
     contentBase: "./public",
     proxy: {
-      "**": "http://localhost:4000"
+      "**": "http://localhost:3000"
     }
+  },
+
+  performance: {
+    hints: process.env.NODE_ENV === "production" ? "warning" : false
   },
 
   plugins: [
