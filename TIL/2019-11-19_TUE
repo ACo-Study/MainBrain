@@ -1,0 +1,9 @@
+Project - HighLife
+    - Warning performance 오류를 해결했다.
+
+React
+    - 로그인은 Mysql Passport-jwt를 사용해서 스스로 해야할 것 같다.
+    - Head 나오게 실행 완료.
+
+느낀점
+    - 오류를 고치는 속도가 빨라지고 있다.(오류와 친해지는 것 같다...)
