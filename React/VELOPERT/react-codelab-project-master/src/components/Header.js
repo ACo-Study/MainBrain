@@ -1,7 +1,24 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class Header extends Component {
   render() {
+    const loginButton = (
+      <li>
+        <a>
+          <i className="material-icons">vpn_key</i>
+        </a>
+      </li>
+    );
+
+    const logoutButton = (
+      <li>
+        <a>
+          <i className="material-icons">lock_open</i>
+        </a>
+      </li>
+    );
+
     return (
       <nav>
         <div className="nav-wrapper blue darken-1">
@@ -16,24 +33,25 @@ class Header extends Component {
           </ul>
 
           <div className="right">
-            <ul>
-              <li>
-                <a>
-                  <i className="material-icons">vpn_key</i>
-                </a>
-              </li>
-              <li>
-                <a>
-                  <i className="material-icons">lock_open</i>
-                </a>
-              </li>
-            </ul>
+            <ul>{this.props.isLoggedIn ? logoutButton : loginButton}</ul>
           </div>
         </div>
       </nav>
     );
   }
 }
+
+Header.propTypes = {
+  isLoggedIn: PropTypes.bool,
+  onLogout: PropTypes.func
+};
+
+Header.defaultProps = {
+  isLoggedIn: false,
+  onLogout: () => {
+    console.error("logout function not defined");
+  }
+};
 
 export default Header;
 

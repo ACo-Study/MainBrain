@@ -3,7 +3,12 @@ import { Header } from "../components";
 
 class App extends React.Component {
   render() {
-    return <Header />;
+    return (
+      <div>
+        <Header />
+        {this.props.children}
+      </div>
+    );
   }
 }
 
