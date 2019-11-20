@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { Route, Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 class Header extends Component {
   render() {
     const loginButton = (
       <li>
         <a>
-          <Link to="/login"><i className="material-icons">vpn_key</i></Link>
+          <Link to="/login">
+            <i className="material-icons">vpn_key</i>
+          </Link>
         </a>
       </li>
     );
@@ -23,8 +25,7 @@ class Header extends Component {
     return (
       <nav>
         <div className="nav-wrapper blue darken-1">
-          <Link to="/" className="brand-logo center">MEMOPAD</Link>
-
+          <t className="brand-logo center">MEMOPAD</t>
           <ul>
             <li>
               <a>

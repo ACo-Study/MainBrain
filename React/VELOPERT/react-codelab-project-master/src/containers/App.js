@@ -3,10 +3,7 @@ import { Header } from "../components";
 
 class App extends React.Component {
   render() {
-    return (
-      <div>
-      </div>
-    );
+    return <div></div>;
   }
 }
 

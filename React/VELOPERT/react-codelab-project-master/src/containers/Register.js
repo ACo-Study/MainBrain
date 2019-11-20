@@ -1,13 +1,14 @@
-import React from 'react';
+import React from "react";
 
 class Register extends React.Component {
-    render() {
-        return (
-            <div>
-                Register
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div>
+        <Authentication />
+        <Authentication mode={false} />
+      </div>
+    );
+  }
 }
 
 export default Register;

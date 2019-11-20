@@ -1,13 +1,14 @@
-import React from 'react';
+import React from "react";
 
 class Login extends React.Component {
-    render() {
-        return (
-            <div>
-                Login
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div>
+        <Authentication />
+        <Authentication mode={true} />
+      </div>
+    );
+  }
 }
 
 export default Login;
@@ -17,7 +18,6 @@ export default Login;
 // import { connect } from 'react-redux';
 // import { loginRequest } from 'actions/authentication';
 // import { browserHistory } from 'react-router';
-
 
 // class Login extends React.Component {
 
