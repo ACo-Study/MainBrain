@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { Route, Link } from 'react-router-dom';
 
 class Header extends Component {
   render() {
     const loginButton = (
       <li>
         <a>
-          <i className="material-icons">vpn_key</i>
+          <Link to="/login"><i className="material-icons">vpn_key</i></Link>
         </a>
       </li>
     );
@@ -22,7 +23,7 @@ class Header extends Component {
     return (
       <nav>
         <div className="nav-wrapper blue darken-1">
-          <a className="brand-logo center">MEMOPAD</a>
+          <Link to="/" className="brand-logo center">MEMOPAD</Link>
 
           <ul>
             <li>

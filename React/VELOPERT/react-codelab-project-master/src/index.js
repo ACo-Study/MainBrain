@@ -1,9 +1,21 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { App } from "./containers";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Home, Login, Register } from './containers';
+import { Header } from './components';
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+const rootElement = document.getElementById('root');
+ReactDOM.render(
+    <Router>
+        <div>
+            <Header />
+            <Route exact path="/" component={Home} />
+            <Route path="/home" component={Home} />
+            <Route path="/login" component={Login} />
+            <Route path="/register" component={Register} />
+        </div>
+    </Router>, rootElement
+);
 
 // import React from 'react';
 // import ReactDOM from 'react-dom';
