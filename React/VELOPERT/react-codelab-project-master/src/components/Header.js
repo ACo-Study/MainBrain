@@ -3,6 +3,10 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     const loginButton = (
       <li>
@@ -16,7 +20,7 @@ class Header extends Component {
 
     const logoutButton = (
       <li>
-        <a>
+        <a onClick={this.props.onLogout}>
           <i className="material-icons">lock_open</i>
         </a>
       </li>
