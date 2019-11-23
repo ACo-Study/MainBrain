@@ -1,20 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { Home, Login, Register } from './containers';
-import { Header } from './components';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Home, Login, Register } from "./containers";
+import { Header } from "./components";
+import thunk from "redux-thunk";
 
-const rootElement = document.getElementById('root');
+const store = createStore(reducers, applyMiddleware(thunk));
+
+const rootElement = document.getElementById("root");
 ReactDOM.render(
+  <Provider store={store}>
     <Router>
-        <div>
-            <Header />
-            <Route exact path="/" component={Home} />
-            <Route path="/home" component={Home} />
-            <Route path="/login" component={Login} />
-            <Route path="/register" component={Register} />
-        </div>
-    </Router>, rootElement
+      <div>
+        <Header />
+        <Route exact path="/" component={Home} />
+        <Route path="/home" component={Home} />
+        <Route path="/login" component={Login} />
+        <Route path="/register" component={Register} />
+      </div>
+    </Router>
+  </Provider>,
+  rootElement
 );
 
 // import React from 'react';
