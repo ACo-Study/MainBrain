@@ -1,0 +1,5 @@
+HighLife Project
+    - Redux 구조 이해중.. (http://localhost:4000/login?username=test&password=test) 와 같이 가는것을 확인!
+    - 내일 axios이해와 node에 파라미터 송수신
+    - 이번주 안에 끝내야 할 것
+        - 로그인, 기능 하나 구성(디자인). (시간 남으면 회원가입)
