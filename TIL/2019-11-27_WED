@@ -1,0 +1,8 @@
+HighLife Project
+    - node model 구조 완성. (추후 변경 가능)
+    - 이번 주에 할 것 생각 완료.
+
+Node
+    - sequalize를 사용하여 db 받아오기 성공. (플라스크랑 비슷한 느낌이었다.)
+    - 아직 프로젝트에 미적용.
+        - 내일 적용 후 passport-jwt를 사용해 로그인 구현.
